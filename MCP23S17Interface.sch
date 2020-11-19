@@ -150,13 +150,13 @@ F 3 "" H 1650 1400 50  0001 C CNN
 	1    1650 1400
 	1    0    0    -1  
 $EndComp
-Text Label 2000 2050 2    50   ~ 0
-~CS
-Text Label 2000 2150 2    50   ~ 0
-SCK
-Text Label 2000 2250 2    50   ~ 0
-MOSI
 Text Label 2000 2350 2    50   ~ 0
+~CS
+Text Label 2000 2250 2    50   ~ 0
+SCK
+Text Label 2000 2150 2    50   ~ 0
+MOSI
+Text Label 2000 2050 2    50   ~ 0
 MISO
 Text Label 2000 2650 2    50   ~ 0
 ~RESET

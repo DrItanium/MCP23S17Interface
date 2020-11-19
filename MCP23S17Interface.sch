@@ -176,11 +176,11 @@ Text Label 2000 2450 2    50   ~ 0
 INTA
 Text Label 2000 2550 2    50   ~ 0
 INTB
-Text Label 1200 5350 0    50   ~ 0
+Text Label 1200 5550 0    50   ~ 0
 A0
 Text Label 1200 5450 0    50   ~ 0
 A1
-Text Label 1200 5550 0    50   ~ 0
+Text Label 1200 5350 0    50   ~ 0
 A2
 Wire Wire Line
 	1200 5350 1650 5350

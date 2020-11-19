@@ -98,28 +98,8 @@ Wire Wire Line
 	3500 1900 3100 1900
 Wire Wire Line
 	3500 1800 3100 1800
-$Comp
-L Device:R R1
-U 1 1 5F9F82F2
-P 2800 2550
-F 0 "R1" H 2870 2596 50  0000 L CNN
-F 1 "10k" H 2870 2505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2730 2550 50  0001 C CNN
-F 3 "~" H 2800 2550 50  0001 C CNN
-	1    2800 2550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2800 2700 3500 2700
-Wire Wire Line
-	2800 2400 2800 900 
-Wire Wire Line
-	2800 900  4200 900 
 Wire Wire Line
 	4200 900  4200 1500
-Wire Wire Line
-	2800 2700 2400 2700
-Connection ~ 2800 2700
 Text Label 2400 2700 0    50   ~ 0
 ~RESET
 Text Label 3100 2500 0    50   ~ 0
@@ -196,18 +176,14 @@ Text Label 2000 2450 2    50   ~ 0
 INTA
 Text Label 2000 2550 2    50   ~ 0
 INTB
-Text Label 1500 4700 0    50   ~ 0
+Text Label 1200 5350 0    50   ~ 0
 A0
-Text Label 1500 5200 0    50   ~ 0
+Text Label 1200 5450 0    50   ~ 0
 A1
-Text Label 1500 5700 0    50   ~ 0
+Text Label 1200 5550 0    50   ~ 0
 A2
 Wire Wire Line
-	1500 5700 2300 5700
-Wire Wire Line
-	2300 5200 1500 5200
-Wire Wire Line
-	1500 4700 2300 4700
+	1200 5350 1650 5350
 Wire Wire Line
 	1200 2550 2000 2550
 $Comp
@@ -367,67 +343,6 @@ L14
 Text Label 7750 3400 2    50   ~ 0
 L15
 $Comp
-L Connector_Generic:Conn_01x03 J3
-U 1 1 5FCA39AF
-P 2500 4700
-F 0 "J3" H 2580 4742 50  0000 L CNN
-F 1 "Conn_01x03" H 2580 4651 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2500 4700 50  0001 C CNN
-F 3 "~" H 2500 4700 50  0001 C CNN
-	1    2500 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x03 J4
-U 1 1 5FCA73ED
-P 2500 5200
-F 0 "J4" H 2580 5242 50  0000 L CNN
-F 1 "Conn_01x03" H 2580 5151 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2500 5200 50  0001 C CNN
-F 3 "~" H 2500 5200 50  0001 C CNN
-	1    2500 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x03 J5
-U 1 1 5FCA956B
-P 2500 5700
-F 0 "J5" H 2580 5742 50  0000 L CNN
-F 1 "Conn_01x03" H 2580 5651 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2500 5700 50  0001 C CNN
-F 3 "~" H 2500 5700 50  0001 C CNN
-	1    2500 5700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2300 4600 2050 4600
-Wire Wire Line
-	2050 4600 2050 5100
-Wire Wire Line
-	2300 4800 2100 4800
-Wire Wire Line
-	2100 4800 2100 4400
-Wire Wire Line
-	2300 5100 2050 5100
-Connection ~ 2050 5100
-Wire Wire Line
-	2300 5300 2100 5300
-Wire Wire Line
-	2100 5300 2100 4800
-Connection ~ 2100 4800
-Wire Wire Line
-	2300 5600 2050 5600
-Wire Wire Line
-	2050 5100 2050 5600
-Connection ~ 2050 5600
-Wire Wire Line
-	2050 5600 2050 6450
-Wire Wire Line
-	2300 5800 2100 5800
-Wire Wire Line
-	2100 5800 2100 5300
-Connection ~ 2100 5300
-$Comp
 L Connector_Generic:Conn_01x09 J1
 U 1 1 5FCB7AEE
 P 1000 2250
@@ -439,25 +354,84 @@ F 3 "~" H 1000 2250 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0101
-U 1 1 5FCBAF97
-P 2100 4400
-F 0 "#PWR0101" H 2100 4250 50  0001 C CNN
-F 1 "VCC" H 2115 4573 50  0000 C CNN
-F 2 "" H 2100 4400 50  0001 C CNN
-F 3 "" H 2100 4400 50  0001 C CNN
-	1    2100 4400
+L Switch:SW_DIP_x03 SW1
+U 1 1 5FB72829
+P 2300 5550
+F 0 "SW1" H 2300 6017 50  0000 C CNN
+F 1 "Address Selection" H 2300 5926 50  0000 C CNN
+F 2 "Switches:DIPSWITCH-03" H 2300 5550 50  0001 C CNN
+F 3 "~" H 2300 5550 50  0001 C CNN
+	1    2300 5550
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2600 5350 2600 5450
+Connection ~ 2600 5450
+Wire Wire Line
+	2600 5450 2600 5550
+Connection ~ 2600 5550
+Wire Wire Line
+	2600 5550 2600 6200
 $Comp
-L power:GND #PWR0102
-U 1 1 5FCBB539
-P 2050 6450
-F 0 "#PWR0102" H 2050 6200 50  0001 C CNN
-F 1 "GND" H 2055 6277 50  0000 C CNN
-F 2 "" H 2050 6450 50  0001 C CNN
-F 3 "" H 2050 6450 50  0001 C CNN
-	1    2050 6450
+L power:GND #PWR06
+U 1 1 5FB7617A
+P 2600 6200
+F 0 "#PWR06" H 2600 5950 50  0001 C CNN
+F 1 "GND" H 2605 6027 50  0000 C CNN
+F 2 "" H 2600 6200 50  0001 C CNN
+F 3 "" H 2600 6200 50  0001 C CNN
+	1    2600 6200
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2000 5450 1750 5450
+Wire Wire Line
+	1200 5550 1850 5550
+Wire Wire Line
+	2400 2700 3500 2700
+$Comp
+L Device:R_Network04_US RN1
+U 1 1 5FB8947C
+P 1750 4500
+F 0 "RN1" H 1938 4546 50  0000 L CNN
+F 1 "10k" H 1938 4455 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP5" V 2025 4500 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 1750 4500 50  0001 C CNN
+	1    1750 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 4300 1550 4000
+$Comp
+L power:VCC #PWR05
+U 1 1 5FB8BBEE
+P 1550 4000
+F 0 "#PWR05" H 1550 3850 50  0001 C CNN
+F 1 "VCC" H 1565 4173 50  0000 C CNN
+F 2 "" H 1550 4000 50  0001 C CNN
+F 3 "" H 1550 4000 50  0001 C CNN
+	1    1550 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 4700 1550 5250
+Wire Wire Line
+	1550 5250 1200 5250
+Text Label 1200 5250 0    50   ~ 0
+~RESET
+Wire Wire Line
+	1650 4700 1650 5350
+Connection ~ 1650 5350
+Wire Wire Line
+	1650 5350 2000 5350
+Wire Wire Line
+	1750 4700 1750 5450
+Connection ~ 1750 5450
+Wire Wire Line
+	1750 5450 1200 5450
+Wire Wire Line
+	1850 4700 1850 5550
+Connection ~ 1850 5550
+Wire Wire Line
+	1850 5550 2000 5550
 $EndSCHEMATC
